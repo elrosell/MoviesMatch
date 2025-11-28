@@ -22,7 +22,7 @@
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
             android:contentDescription="Póster grande de película"
-            android:src="@mipmap/ic_launcher_foreground" />
+            android:src="@mipmap/ic_launcher" />
 
         <TextView
             android:id="@+id/txtMovieTitleDetail"
@@ -91,12 +91,12 @@
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipTag1"
-                style="@style/Widget.MaterialComponents.Chip.Assist"
+                style="@style/AppChip.Dark"
                 android:text="Divertida" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipTag2"
-                style="@style/Widget.MaterialComponents.Chip.Assist"
+                style="@style/AppChip.Dark"
                 android:text="Ligera" />
 
         </com.google.android.material.chip.ChipGroup>
