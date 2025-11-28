@@ -5,22 +5,23 @@
     android:id="@+id/rootMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#030213"
+    android:background="@drawable/bg_app_gradient"
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/topAppBar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#050816"
-        app:title="¿Qué vemos hoy?"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
+        android:visibility="gone"
+        app:title=""
         app:titleCentered="true"
         app:titleTextColor="@android:color/white" />
 
     <FrameLayout
         android:id="@+id/fragmentContainer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="?attr/actionBarSize" />
+        android:layout_height="match_parent" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
