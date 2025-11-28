@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollHome"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#030213"
+    android:padding="16dp"
+    tools:context=".ui.home.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Encabezado -->
+        <TextView
+            android:id="@+id/txtHomeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Qué vemos hoy?"
+            android:textColor="@android:color/white"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/txtHomeSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Elige tu tiempo, mood y compañía y yo hago la magia ✨"
+            android:textColor="#9CA3AF"
+            android:textSize="14sp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Tiempo disponible -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tiempo disponible"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleSelection="true"
+            app:chipSpacing="8dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTime30"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:text="30 min" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTime60"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:text="1 h" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTime90"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:text="1.5 h" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTime120"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:text="2 h+" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <!-- Estado de ánimo -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estado de ánimo"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupMood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleSelection="true"
+            app:chipSpacing="8dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipMoodRelax"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:text="Relax 💤" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipMoodRisa"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:text="Risa 😂" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipMoodPensar"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:text="Pensar 🧠" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipMoodSusto"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:text="Susto 😱" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <!-- Compañía -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Con quién estás?"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupCompany"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleSelection="true"
+            app:chipSpacing="8dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipSolo"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:text="Solo" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipPareja"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:text="Pareja" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipAmigos"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:text="Amigos" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipFamilia"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:text="Familia" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <!-- Botones -->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBuscarPelicula"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Buscar película" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnModoGrupo"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Modo grupo"
+            android:layout_marginTop="12dp" />
+
+    </LinearLayout>
+
+</ScrollView>

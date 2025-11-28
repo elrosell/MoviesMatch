@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollOnboarding"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#030213"
+    android:padding="16dp"
+    tools:context=".ui.onboarding.OnboardingFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- “Hero” superior -->
+        <TextView
+            android:id="@+id/txtWelcomeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Configura tus recomendaciones"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/txtWelcomeSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Elige géneros, plataformas y cosas que quieres evitar."
+            android:textColor="#9CA3AF"
+            android:textSize="14sp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Géneros -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Géneros favoritos"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupGenres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleSelection="false"
+            app:chipSpacing="8dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipAccion"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:text="Acción" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipComedia"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:text="Comedia" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipDrama"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:text="Drama" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTerror"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:text="Terror" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipSciFi"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:text="Sci-Fi" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipRomance"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:text="Romance" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <!-- Plataformas -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Plataformas que tienes"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupPlatforms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleSelection="false"
+            app:chipSpacing="8dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipNetflix"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:text="Netflix" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipPrime"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:text="Prime Video" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipDisney"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:text="Disney+" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipHbo"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:text="HBO Max" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipApple"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:text="Apple TV+" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <!-- Cosas a evitar -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Algo que quieras evitar?"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupAvoid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleSelection="false"
+            app:chipSpacing="8dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipViolencia"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:text="Mucha violencia" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipGore"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:text="Gore" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipLentas"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:text="Películas lentas" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipFinalTriste"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:text="Finales tristes" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <!-- Botones -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="32dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSkipOnboarding"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:text="Saltar" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFinishOnboarding"
+                style="@style/Widget.MaterialComponents.Button"
+                android:text="Continuar"
+                android:layout_marginStart="8dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
