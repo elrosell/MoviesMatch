@@ -1,4 +1,4 @@
-package com.example.moviematch.ui.common;
+package com.example.moviematch.interfaz.comun;
 
 import android.content.Context;
 import android.graphics.LinearGradient;
@@ -9,17 +9,17 @@ import androidx.appcompat.widget.AppCompatTextView;
 
 import com.example.moviematch.R;
 
-public class GradientTextView extends AppCompatTextView {
+public class TextoDegradadoView extends AppCompatTextView {
 
-    public GradientTextView(Context context) {
+    public TextoDegradadoView(Context context) {
         super(context);
     }
 
-    public GradientTextView(Context context, AttributeSet attrs) {
+    public TextoDegradadoView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public GradientTextView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public TextoDegradadoView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 

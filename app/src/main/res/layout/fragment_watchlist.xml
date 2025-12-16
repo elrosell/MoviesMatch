@@ -6,13 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#030213"
-    tools:context=".ui.watchlist.WatchlistFragment">
+    tools:context=".interfaz.guardadas.VerDespuesFragment">
 
     <TextView
         android:id="@+id/txtWatchlistTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ver después"
+        android:text="@string/titulo_watchlist"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         android:textStyle="bold"

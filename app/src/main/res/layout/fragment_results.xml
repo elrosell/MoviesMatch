@@ -6,13 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#030213"
-    tools:context=".ui.results.ResultsFragment">
+    tools:context=".interfaz.recomendaciones.RecomendacionesFragment">
 
     <TextView
         android:id="@+id/txtResultsTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Recomendaciones para ti"
+        android:text="@string/resultados_titulo"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         android:textStyle="bold"

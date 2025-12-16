@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#030213"
     android:padding="16dp"
-    tools:context=".ui.group.GroupModeFragment">
+    tools:context=".interfaz.grupo.ModoGrupoFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@
             android:id="@+id/txtGroupTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Modo grupo"
+            android:text="@string/titulo_modo_grupo"
             android:textColor="@android:color/white"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -27,7 +27,7 @@
             android:id="@+id/txtGroupSubtitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Crea una sala, comparte el código con tus amigos y voten juntos por la película perfecta."
+            android:text="@string/subtitulo_modo_grupo"
             android:textColor="#9CA3AF"
             android:textSize="14sp"
             android:layout_marginBottom="24dp" />
@@ -37,13 +37,13 @@
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Crear sala" />
+            android:text="@string/boton_crear_sala" />
 
         <TextView
             android:id="@+id/txtOr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="o"
+            android:text="@string/texto_o"
             android:textColor="#9CA3AF"
             android:textSize="14sp"
             android:layout_gravity="center_horizontal"
@@ -54,7 +54,7 @@
             android:id="@+id/editRoomCode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Código de sala"
+            android:hint="@string/hint_codigo"
             android:inputType="text"
             android:textColor="@android:color/white"
             android:textColorHint="#6B7280"
@@ -65,7 +65,7 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Unirse a sala"
+            android:text="@string/boton_unirse"
             android:layout_marginTop="12dp" />
 
         <View
@@ -79,7 +79,7 @@
             android:id="@+id/txtGroupResultTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Resultado de la sala"
+            android:text="@string/titulo_resultado_sala"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -89,7 +89,7 @@
             android:id="@+id/txtGroupResultInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Aquí se mostrará la película ganadora cuando termine la votación."
+            android:text="@string/texto_resultado_sala"
             android:textColor="#9CA3AF"
             android:textSize="14sp" />
 

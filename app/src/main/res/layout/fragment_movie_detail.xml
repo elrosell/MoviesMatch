@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#030213"
     android:padding="16dp"
-    tools:context=".ui.detail.MovieDetailFragment">
+    tools:context=".interfaz.detalle.DetallePeliculaFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,14 +21,14 @@
             android:layout_weight="3"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
-            android:contentDescription="Póster grande de película"
+            android:contentDescription="@string/poster_big_desc"
             android:src="@mipmap/ic_launcher" />
 
         <TextView
             android:id="@+id/txtMovieTitleDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Título de la película"
+            android:text="@string/movie_title_placeholder"
             android:textColor="@android:color/white"
             android:textSize="22sp"
             android:textStyle="bold"
@@ -38,7 +38,7 @@
             android:id="@+id/txtMovieMetaDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2024 · 1h 45m · Acción · +13"
+            android:text="@string/meta_placeholder"
             android:textColor="#9CA3AF"
             android:textSize="13sp"
             android:layout_marginTop="4dp" />
@@ -47,7 +47,7 @@
             android:id="@+id/txtMoviePlatformsDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Disponible en: Netflix"
+            android:text="@string/plataforma_placeholder"
             android:textColor="#FACC15"
             android:textStyle="bold"
             android:textSize="13sp"
@@ -57,7 +57,7 @@
             android:id="@+id/txtSectionSynopsis"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sinopsis"
+            android:text="@string/seccion_sinopsis"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -67,7 +67,7 @@
             android:id="@+id/txtMovieSynopsis"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Aquí va la descripción de la película..."
+            android:text="@string/sinopsis_placeholder"
             android:textColor="#D1D5DB"
             android:textSize="14sp"
             android:layout_marginTop="4dp" />
@@ -76,7 +76,7 @@
             android:id="@+id/txtSectionTags"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mood / etiquetas"
+            android:text="@string/seccion_etiquetas"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -88,16 +88,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             app:chipSpacing="8dp">
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chipTag1"
-                style="@style/AppChip.Dark"
-                android:text="Divertida" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chipTag2"
-                style="@style/AppChip.Dark"
-                android:text="Ligera" />
 
         </com.google.android.material.chip.ChipGroup>
 
@@ -114,7 +104,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Ver después" />
+                android:text="@string/boton_ver_despues" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnDislike"
@@ -123,7 +113,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginStart="8dp"
-                android:text="No me interesa" />
+                android:text="@string/boton_no_interesa" />
 
         </LinearLayout>
 

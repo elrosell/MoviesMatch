@@ -9,9 +9,11 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.moviematch.ui.home.HomeFragment;
+import com.example.moviematch.datos.PreferenciasUsuario;
+import com.example.moviematch.interfaz.configuracion.ConfiguracionInicialFragment;
+import com.example.moviematch.interfaz.inicio.InicioFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class ActividadPrincipal extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,10 +31,18 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (savedInstanceState == null) {
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.fragmentContainer, new HomeFragment())
-                    .commit();
+            PreferenciasUsuario preferenciasUsuario = new PreferenciasUsuario(this);
+            if (preferenciasUsuario.onboardingCompletado()) {
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.fragmentContainer, new InicioFragment())
+                        .commit();
+            } else {
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.fragmentContainer, new ConfiguracionInicialFragment())
+                        .commit();
+            }
         }
     }
 }
