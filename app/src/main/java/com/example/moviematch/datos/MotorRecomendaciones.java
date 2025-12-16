@@ -33,11 +33,11 @@ public class MotorRecomendaciones {
             resultados.add(new ResultadoPelicula(pelicula, puntaje));
         }
 
-        resultados.sort(Comparator.comparingInt(ResultadoPelicula::puntaje).reversed());
+        resultados.sort(Comparator.comparingInt(ResultadoPelicula::getPuntaje).reversed());
 
         List<Pelicula> seleccionadas = new ArrayList<>();
         for (int i = 0; i < resultados.size() && i < 10; i++) {
-            seleccionadas.add(resultados.get(i).pelicula());
+            seleccionadas.add(resultados.get(i).getPelicula());
         }
 
         if (seleccionadas.isEmpty()) {
@@ -160,6 +160,21 @@ public class MotorRecomendaciones {
         return true;
     }
 
-    private record ResultadoPelicula(Pelicula pelicula, int puntaje) {
+    private static class ResultadoPelicula {
+        private final Pelicula pelicula;
+        private final int puntaje;
+
+        ResultadoPelicula(Pelicula pelicula, int puntaje) {
+            this.pelicula = pelicula;
+            this.puntaje = puntaje;
+        }
+
+        public Pelicula getPelicula() {
+            return pelicula;
+        }
+
+        public int getPuntaje() {
+            return puntaje;
+        }
     }
 }
