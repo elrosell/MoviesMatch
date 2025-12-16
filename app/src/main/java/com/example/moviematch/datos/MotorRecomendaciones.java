@@ -15,6 +15,7 @@ import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 import java.util.Set;
@@ -41,7 +42,7 @@ public class MotorRecomendaciones {
             if (idsDescartadas.contains(pelicula.getId())) {
                 continue;
             }
-            if (contieneCriterioAEvitar(pelicula, preferenciasUsuario.getEvitar())) {
+            if (contieneCriterioAEvitar(pelicula, preferenciasUsuario != null ? preferenciasUsuario.getEvitar() : null)) {
                 continue;
             }
 
@@ -58,21 +59,25 @@ public class MotorRecomendaciones {
     private int calcularPuntaje(Pelicula pelicula, PreferenciasUsuario preferenciasUsuario, String mood, Integer duracionMaxima, String compania) {
         int puntaje = 0;
 
+        // Listas seguras (evita crasheos si en SharedPreferences quedó guardado null)
+        List<String> generosPref = listaSegura(preferenciasUsuario != null ? preferenciasUsuario.getGeneros() : null);
+        List<String> plataformasPref = listaSegura(preferenciasUsuario != null ? preferenciasUsuario.getPlataformas() : null);
+
         if (mood != null && !mood.isEmpty() && pelicula.getMood() != null && mood.equalsIgnoreCase(pelicula.getMood())) {
             puntaje += 5;
         }
 
-        if (pelicula.getGeneros() != null) {
+        if (pelicula.getGeneros() != null && !generosPref.isEmpty()) {
             for (String genero : pelicula.getGeneros()) {
-                if (preferenciasUsuario.getGeneros().contains(genero)) {
+                if (generosPref.contains(genero)) {
                     puntaje += 2;
                 }
             }
         }
 
-        if (pelicula.getPlataformas() != null) {
+        if (pelicula.getPlataformas() != null && !plataformasPref.isEmpty()) {
             for (String plataforma : pelicula.getPlataformas()) {
-                if (preferenciasUsuario.getPlataformas().contains(plataforma)) {
+                if (plataformasPref.contains(plataforma)) {
                     puntaje += 1;
                 }
             }
@@ -91,6 +96,10 @@ public class MotorRecomendaciones {
         }
 
         return puntaje;
+    }
+
+    private List<String> listaSegura(List<String> lista) {
+        return lista != null ? lista : Collections.emptyList();
     }
 
     private boolean contieneCriterioAEvitar(Pelicula pelicula, List<String> evitar) {

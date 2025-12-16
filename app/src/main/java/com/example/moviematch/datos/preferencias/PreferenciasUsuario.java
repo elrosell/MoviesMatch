@@ -15,7 +15,7 @@ public class PreferenciasUsuario implements Serializable {
     }
 
     public void setGeneros(List<String> generos) {
-        this.generos = generos;
+        this.generos = generos != null ? generos : new ArrayList<>();
     }
 
     public List<String> getPlataformas() {
@@ -23,7 +23,7 @@ public class PreferenciasUsuario implements Serializable {
     }
 
     public void setPlataformas(List<String> plataformas) {
-        this.plataformas = plataformas;
+        this.plataformas = plataformas != null ? plataformas : new ArrayList<>();
     }
 
     public List<String> getEvitar() {
@@ -31,6 +31,6 @@ public class PreferenciasUsuario implements Serializable {
     }
 
     public void setEvitar(List<String> evitar) {
-        this.evitar = evitar;
+        this.evitar = evitar != null ? evitar : new ArrayList<>();
     }
 }

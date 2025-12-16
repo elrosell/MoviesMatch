@@ -17,17 +17,17 @@ import java.util.List;
 
 public class RepositorioWatchlistSQLite {
 
-    private final AyudanteBaseDatosSQLite ayudanteBaseDatosSQLite;
+    private final Base base;
     private final Gson gson = new Gson();
     private final Type tipoListaString = new TypeToken<List<String>>() {
     }.getType();
 
     public RepositorioWatchlistSQLite(Context context) {
-        ayudanteBaseDatosSQLite = new AyudanteBaseDatosSQLite(context.getApplicationContext());
+        base = new Base(context.getApplicationContext());
     }
 
     public boolean guardarPelicula(Pelicula pelicula) {
-        SQLiteDatabase db = ayudanteBaseDatosSQLite.getWritableDatabase();
+        SQLiteDatabase db = null;
         ContentValues valores = new ContentValues();
         valores.put("pelicula_id", pelicula.getId());
         valores.put("titulo", pelicula.getTitulo());
@@ -41,8 +41,9 @@ public class RepositorioWatchlistSQLite {
         valores.put("fecha_guardado", System.currentTimeMillis());
 
         try {
+            db = base.getWritableDatabase();
             long resultado = db.insertWithOnConflict(
-                    AyudanteBaseDatosSQLite.TABLA_WATCHLIST,
+                    Base.TABLA_WATCHLIST,
                     null,
                     valores,
                     SQLiteDatabase.CONFLICT_IGNORE
@@ -50,25 +51,37 @@ public class RepositorioWatchlistSQLite {
             return resultado != -1;
         } catch (SQLiteException e) {
             return false;
+        } finally {
+            if (db != null) {
+                db.close();
+            }
         }
     }
 
     public boolean eliminarPeliculaPorId(String peliculaId) {
-        SQLiteDatabase db = ayudanteBaseDatosSQLite.getWritableDatabase();
-        int filas = db.delete(
-                AyudanteBaseDatosSQLite.TABLA_WATCHLIST,
-                "pelicula_id = ?",
-                new String[]{peliculaId}
-        );
-        return filas > 0;
+        SQLiteDatabase db = null;
+        try {
+            db = base.getWritableDatabase();
+            int filas = db.delete(
+                    Base.TABLA_WATCHLIST,
+                    "pelicula_id = ?",
+                    new String[]{peliculaId}
+            );
+            return filas > 0;
+        } finally {
+            if (db != null) {
+                db.close();
+            }
+        }
     }
 
     public boolean existeEnWatchlist(String peliculaId) {
-        SQLiteDatabase db = ayudanteBaseDatosSQLite.getReadableDatabase();
+        SQLiteDatabase db = null;
         Cursor cursor = null;
         try {
+            db = base.getReadableDatabase();
             cursor = db.rawQuery(
-                    "SELECT pelicula_id FROM " + AyudanteBaseDatosSQLite.TABLA_WATCHLIST + " WHERE pelicula_id = ?",
+                    "SELECT pelicula_id FROM " + Base.TABLA_WATCHLIST + " WHERE pelicula_id = ?",
                     new String[]{peliculaId}
             );
             return cursor.moveToFirst();
@@ -76,17 +89,21 @@ public class RepositorioWatchlistSQLite {
             if (cursor != null) {
                 cursor.close();
             }
+            if (db != null) {
+                db.close();
+            }
         }
     }
 
     public List<Pelicula> obtenerWatchlist() {
-        SQLiteDatabase db = ayudanteBaseDatosSQLite.getReadableDatabase();
+        SQLiteDatabase db = null;
         Cursor cursor = null;
         List<Pelicula> peliculas = new ArrayList<>();
         try {
+            db = base.getReadableDatabase();
             cursor = db.rawQuery(
                     "SELECT pelicula_id, titulo, anio, duracion_min, generos, plataformas, mood, sinopsis, poster_url FROM " +
-                            AyudanteBaseDatosSQLite.TABLA_WATCHLIST + " ORDER BY fecha_guardado DESC",
+                            Base.TABLA_WATCHLIST + " ORDER BY fecha_guardado DESC",
                     null
             );
             while (cursor.moveToNext()) {
@@ -97,6 +114,9 @@ public class RepositorioWatchlistSQLite {
         } finally {
             if (cursor != null) {
                 cursor.close();
+            }
+            if (db != null) {
+                db.close();
             }
         }
         return peliculas;
