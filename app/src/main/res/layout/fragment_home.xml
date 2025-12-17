@@ -57,21 +57,29 @@
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipTime30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 style="@style/AppChip.Dark"
                 android:text="30 min" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipTime60"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 style="@style/AppChip.Dark"
                 android:text="1 h" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipTime90"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 style="@style/AppChip.Dark"
                 android:text="1.5 h" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipTime120"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 style="@style/AppChip.Dark"
                 android:text="2 h+" />
 
@@ -98,21 +106,29 @@
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipMoodRelax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 style="@style/AppChip.Dark"
                 android:text="😴 Relax" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipMoodRisa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 style="@style/AppChip.Dark"
                 android:text="😂 Risa" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipMoodPensar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 style="@style/AppChip.Dark"
                 android:text="🧠 Pensar" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipMoodSusto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 style="@style/AppChip.Dark"
                 android:text="😱 Susto" />
 
@@ -139,21 +155,29 @@
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipSolo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 style="@style/AppChip.Dark"
                 android:text="Solo" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipPareja"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 style="@style/AppChip.Dark"
                 android:text="Pareja" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipAmigos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 style="@style/AppChip.Dark"
                 android:text="Amigos" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipFamilia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 style="@style/AppChip.Dark"
                 android:text="Familia" />
 

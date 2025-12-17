@@ -53,31 +53,43 @@
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipAccion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:text="Acción" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipComedia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:text="Comedia" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipDrama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:text="Drama" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipTerror"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:text="Terror" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipSciFi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:text="Sci-Fi" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipRomance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:text="Romance" />
 
@@ -103,26 +115,36 @@
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipNetflix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:text="Netflix" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipPrime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:text="Prime Video" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipDisney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:text="Disney+" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipHbo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:text="HBO Max" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipApple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:text="Apple TV+" />
 
@@ -148,21 +170,29 @@
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipViolencia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:text="Mucha violencia" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipGore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:text="Gore" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipLentas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:text="Películas lentas" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipFinalTriste"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:text="Finales tristes" />
 
@@ -178,11 +208,15 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnSkipOnboarding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:text="Saltar" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnFinishOnboarding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.Button"
                 android:text="Continuar"
                 android:layout_marginStart="8dp" />
