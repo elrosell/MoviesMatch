@@ -1,14 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <!--
-      IMPORTANTE:
-      La app usa estilos de MaterialComponents (Widget.MaterialComponents.*).
-      En varios proyectos esto puede crashear al inflar MaterialButton/Chip si el
-      tema base es Material3. Para evitar el crash de arranque, usamos un tema
-      MaterialComponents.
-    -->
-    <style name="Base.Theme.MovieMatch" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- Colores y look&feel principal se controlan con tus drawables y estilos -->
+    <style name="Base.Theme.MovieMatch" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
     <style name="Theme.MovieMatch" parent="Base.Theme.MovieMatch" />

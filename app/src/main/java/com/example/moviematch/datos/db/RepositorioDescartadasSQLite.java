@@ -11,21 +11,20 @@ import java.util.Set;
 
 public class RepositorioDescartadasSQLite {
 
-    private final Base base;
+    private final AyudanteBaseDatosSQLite ayudanteBaseDatosSQLite;
 
     public RepositorioDescartadasSQLite(Context context) {
-        base = new Base(context.getApplicationContext());
+        ayudanteBaseDatosSQLite = new AyudanteBaseDatosSQLite(context.getApplicationContext());
     }
 
     public boolean descartarPelicula(String peliculaId) {
-        SQLiteDatabase db = null;
+        SQLiteDatabase db = ayudanteBaseDatosSQLite.getWritableDatabase();
         ContentValues valores = new ContentValues();
         valores.put("pelicula_id", peliculaId);
         valores.put("fecha_descartado", System.currentTimeMillis());
         try {
-            db = base.getWritableDatabase();
             long resultado = db.insertWithOnConflict(
-                    Base.TABLA_DESCARTADAS,
+                    AyudanteBaseDatosSQLite.TABLA_DESCARTADAS,
                     null,
                     valores,
                     SQLiteDatabase.CONFLICT_IGNORE
@@ -33,20 +32,15 @@ public class RepositorioDescartadasSQLite {
             return resultado != -1;
         } catch (SQLiteException e) {
             return false;
-        } finally {
-            if (db != null) {
-                db.close();
-            }
         }
     }
 
     public boolean estaDescartada(String peliculaId) {
-        SQLiteDatabase db = null;
+        SQLiteDatabase db = ayudanteBaseDatosSQLite.getReadableDatabase();
         Cursor cursor = null;
         try {
-            db = base.getReadableDatabase();
             cursor = db.rawQuery(
-                    "SELECT pelicula_id FROM " + Base.TABLA_DESCARTADAS + " WHERE pelicula_id = ?",
+                    "SELECT pelicula_id FROM " + AyudanteBaseDatosSQLite.TABLA_DESCARTADAS + " WHERE pelicula_id = ?",
                     new String[]{peliculaId}
             );
             return cursor.moveToFirst();
@@ -54,20 +48,16 @@ public class RepositorioDescartadasSQLite {
             if (cursor != null) {
                 cursor.close();
             }
-            if (db != null) {
-                db.close();
-            }
         }
     }
 
     public Set<String> obtenerIdsDescartadas() {
-        SQLiteDatabase db = null;
+        SQLiteDatabase db = ayudanteBaseDatosSQLite.getReadableDatabase();
         Cursor cursor = null;
         Set<String> ids = new HashSet<>();
         try {
-            db = base.getReadableDatabase();
             cursor = db.rawQuery(
-                    "SELECT pelicula_id FROM " + Base.TABLA_DESCARTADAS,
+                    "SELECT pelicula_id FROM " + AyudanteBaseDatosSQLite.TABLA_DESCARTADAS,
                     null
             );
             while (cursor.moveToNext()) {
@@ -76,9 +66,6 @@ public class RepositorioDescartadasSQLite {
         } finally {
             if (cursor != null) {
                 cursor.close();
-            }
-            if (db != null) {
-                db.close();
             }
         }
         return ids;
