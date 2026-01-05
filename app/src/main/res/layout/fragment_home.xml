@@ -58,21 +58,29 @@
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipTime30"
                 style="@style/AppChip.Dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/home_time_30" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipTime60"
                 style="@style/AppChip.Dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/home_time_60" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipTime90"
                 style="@style/AppChip.Dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/home_time_90" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipTime120"
                 style="@style/AppChip.Dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/home_time_120" />
 
         </com.google.android.material.chip.ChipGroup>
@@ -99,21 +107,29 @@
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipMoodRelax"
                 style="@style/AppChip.Dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/home_mood_relax" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipMoodRisa"
                 style="@style/AppChip.Dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/home_mood_laugh" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipMoodPensar"
                 style="@style/AppChip.Dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/home_mood_think" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipMoodSusto"
                 style="@style/AppChip.Dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/home_mood_scare" />
 
         </com.google.android.material.chip.ChipGroup>
@@ -140,21 +156,29 @@
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipSolo"
                 style="@style/AppChip.Dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/home_company_solo" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipPareja"
                 style="@style/AppChip.Dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/home_company_couple" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipAmigos"
                 style="@style/AppChip.Dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/home_company_friends" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipFamilia"
                 style="@style/AppChip.Dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/home_company_family" />
 
         </com.google.android.material.chip.ChipGroup>
