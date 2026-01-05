@@ -90,11 +90,15 @@
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipTag1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 style="@style/AppChip.Dark"
                 android:text="@string/tag_fun" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipTag2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 style="@style/AppChip.Dark"
                 android:text="@string/tag_light" />
 
