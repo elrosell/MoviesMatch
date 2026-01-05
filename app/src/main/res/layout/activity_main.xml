@@ -8,6 +8,11 @@
     android:background="@drawable/bg_app_gradient"
     tools:context=".ActividadPrincipal">
 
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/topAppBar"
         android:layout_width="match_parent"
@@ -18,10 +23,5 @@
         app:title=""
         app:titleCentered="true"
         app:titleTextColor="@android:color/white" />
-
-    <FrameLayout
-        android:id="@+id/fragmentContainer"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

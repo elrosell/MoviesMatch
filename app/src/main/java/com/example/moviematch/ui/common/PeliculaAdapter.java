@@ -97,11 +97,12 @@ public class PeliculaAdapter extends RecyclerView.Adapter<PeliculaAdapter.Pelicu
             String generosTexto = pelicula.getGeneros() != null ? String.join(", ", pelicula.getGeneros()) : "";
             String info = String.format(Locale.getDefault(), "%d · %dm · %s", pelicula.getAnio(), pelicula.getDuracionMin(), generosTexto);
             txtInfo.setText(info);
-            txtMood.setText(String.format(Locale.getDefault(), "Mood: %s", pelicula.getMood()));
-            if (pelicula.getPlataformas() != null) {
-                String plataformasTexto = pelicula.getPlataformas().stream().collect(Collectors.joining(", "));
-                txtPlataformas.setText(String.format(Locale.getDefault(), "Disponible en: %s", plataformasTexto));
-            }
+            String mood = pelicula.getMood() != null ? pelicula.getMood() : "";
+            txtMood.setText(String.format(Locale.getDefault(), "Mood: %s", mood));
+            String plataformasTexto = pelicula.getPlataformas() != null
+                    ? pelicula.getPlataformas().stream().collect(Collectors.joining(", "))
+                    : "";
+            txtPlataformas.setText(String.format(Locale.getDefault(), "Disponible en: %s", plataformasTexto));
 
             Glide.with(context)
                     .load(pelicula.getPosterUrl())

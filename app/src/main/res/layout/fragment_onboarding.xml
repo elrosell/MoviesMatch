@@ -19,7 +19,7 @@
             android:id="@+id/txtWelcomeTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Configura tus recomendaciones"
+            android:text="@string/onboarding_title"
             android:textColor="@android:color/white"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -29,7 +29,7 @@
             android:id="@+id/txtWelcomeSubtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Elige géneros, plataformas y cosas que quieres evitar."
+            android:text="@string/onboarding_subtitle"
             android:textColor="#9CA3AF"
             android:textSize="14sp"
             android:layout_marginBottom="24dp" />
@@ -38,7 +38,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Géneros favoritos"
+            android:text="@string/onboarding_genres_label"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -54,32 +54,32 @@
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipAccion"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:text="Acción" />
+                android:text="@string/genre_action" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipComedia"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:text="Comedia" />
+                android:text="@string/genre_comedy" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipDrama"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:text="Drama" />
+                android:text="@string/genre_drama" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipTerror"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:text="Terror" />
+                android:text="@string/genre_horror" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipSciFi"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:text="Sci-Fi" />
+                android:text="@string/genre_scifi" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipRomance"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:text="Romance" />
+                android:text="@string/genre_romance" />
 
         </com.google.android.material.chip.ChipGroup>
 
@@ -87,7 +87,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Plataformas que tienes"
+            android:text="@string/onboarding_platforms_label"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -104,27 +104,27 @@
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipNetflix"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:text="Netflix" />
+                android:text="@string/platform_netflix" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipPrime"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:text="Prime Video" />
+                android:text="@string/platform_prime" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipDisney"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:text="Disney+" />
+                android:text="@string/platform_disney" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipHbo"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:text="HBO Max" />
+                android:text="@string/platform_hbo" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipApple"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:text="Apple TV+" />
+                android:text="@string/platform_apple" />
 
         </com.google.android.material.chip.ChipGroup>
 
@@ -132,7 +132,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="¿Algo que quieras evitar?"
+            android:text="@string/onboarding_avoid_label"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -149,22 +149,22 @@
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipViolencia"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:text="Mucha violencia" />
+                android:text="@string/avoid_violence" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipGore"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:text="Gore" />
+                android:text="@string/avoid_gore" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipLentas"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:text="Películas lentas" />
+                android:text="@string/avoid_slow_movies" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipFinalTriste"
                 style="@style/Widget.MaterialComponents.Chip.Filter"
-                android:text="Finales tristes" />
+                android:text="@string/avoid_sad_endings" />
 
         </com.google.android.material.chip.ChipGroup>
 
@@ -179,12 +179,12 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnSkipOnboarding"
                 style="@style/Widget.MaterialComponents.Button.TextButton"
-                android:text="Saltar" />
+                android:text="@string/onboarding_skip" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnFinishOnboarding"
                 style="@style/Widget.MaterialComponents.Button"
-                android:text="Continuar"
+                android:text="@string/onboarding_continue"
                 android:layout_marginStart="8dp" />
 
         </LinearLayout>
