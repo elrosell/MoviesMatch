@@ -206,11 +206,15 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnSkipOnboarding"
                 style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/onboarding_skip" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnFinishOnboarding"
                 style="@style/AppButton.Primary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/onboarding_continue"
                 android:textAllCaps="false"
                 android:layout_marginStart="8dp" />
