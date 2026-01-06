@@ -57,4 +57,18 @@
     <string name="avoid_sad_endings">Finales tristes</string>
     <string name="onboarding_skip">Saltar</string>
     <string name="onboarding_continue">Continuar</string>
+
+    <string name="nav_welcome">Inicio</string>
+    <string name="nav_home">Recomendador</string>
+    <string name="nav_onboarding">Mis preferencias</string>
+    <string name="nav_watchlist">Mi watchlist</string>
+    <string name="nav_group">Modo grupo</string>
+    <string name="nav_subtitle">Encuentra la peli perfecta</string>
+    <string name="navigation_drawer_open">Abrir menú de navegación</string>
+    <string name="navigation_drawer_close">Cerrar menú de navegación</string>
+
+    <string name="welcome_title">Tu guía para elegir peli</string>
+    <string name="welcome_subtitle">Bienvenido/a a MoviesMatch. Descubre recomendaciones personalizadas, guarda tus favoritas y explora en modo grupo sin salir de aquí.</string>
+    <string name="welcome_start_button">Empezar</string>
+    <string name="welcome_onboarding_hint">Ajustaremos tus preferencias si aún no las has configurado.</string>
 </resources>
