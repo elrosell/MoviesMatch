@@ -41,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
-            android:text="@string/home_time_label"
+            android:text="• Tiempo disponible"
             android:textColor="@color/text_primary"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -60,28 +60,28 @@
                 style="@style/AppChip.Dark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/home_time_30" />
+                android:text="30 min" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipTime60"
                 style="@style/AppChip.Dark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/home_time_60" />
+                android:text="1 h" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipTime90"
                 style="@style/AppChip.Dark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/home_time_90" />
+                android:text="1.5 h" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipTime120"
                 style="@style/AppChip.Dark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/home_time_120" />
+                android:text="2 h+" />
 
         </com.google.android.material.chip.ChipGroup>
 
@@ -89,7 +89,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
-            android:text="@string/home_mood_label"
+            android:text="• Estado de ánimo"
             android:textColor="@color/text_primary"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -109,28 +109,28 @@
                 style="@style/AppChip.Dark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/home_mood_relax" />
+                android:text="😴 Relax" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipMoodRisa"
                 style="@style/AppChip.Dark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/home_mood_laugh" />
+                android:text="😂 Risa" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipMoodPensar"
                 style="@style/AppChip.Dark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/home_mood_think" />
+                android:text="🧠 Pensar" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipMoodSusto"
                 style="@style/AppChip.Dark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/home_mood_scare" />
+                android:text="😱 Susto" />
 
         </com.google.android.material.chip.ChipGroup>
 
@@ -138,7 +138,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
-            android:text="@string/home_company_label"
+            android:text="• ¿Con quién estás?"
             android:textColor="@color/text_primary"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -158,28 +158,28 @@
                 style="@style/AppChip.Dark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/home_company_solo" />
+                android:text="Solo" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipPareja"
                 style="@style/AppChip.Dark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/home_company_couple" />
+                android:text="Pareja" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipAmigos"
                 style="@style/AppChip.Dark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/home_company_friends" />
+                android:text="Amigos" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipFamilia"
                 style="@style/AppChip.Dark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/home_company_family" />
+                android:text="Familia" />
 
         </com.google.android.material.chip.ChipGroup>
 
@@ -189,7 +189,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="@string/home_search_button"
+            android:text="Buscar película"
             android:textAllCaps="false"
             android:textStyle="bold" />
 
@@ -199,10 +199,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="@string/home_group_mode_button"
+            android:text="Modo grupo"
             android:textAllCaps="false"
             android:textStyle="bold" />
 
     </LinearLayout>
+
 
 </ScrollView>
