@@ -21,7 +21,6 @@ import com.example.moviematch.datos.preferencias.GestorPreferenciasUsuario;
 import com.example.moviematch.ui.bienvenida.BienvenidaFragment;
 import com.example.moviematch.ui.detalle.DetallePeliculaFragment;
 import com.example.moviematch.ui.inicio.InicioFragment;
-import com.example.moviematch.ui.modogrupo.ModoGrupoFragment;
 import com.example.moviematch.ui.onboarding.OnboardingFragment;
 import com.example.moviematch.ui.recomendaciones.RecomendacionesFragment;
 import com.example.moviematch.ui.verdespues.VerDespuesFragment;
@@ -105,8 +104,6 @@ public class ActividadPrincipal extends AppCompatActivity {
             irAOnboarding();
         } else if (itemId == R.id.nav_watchlist) {
             irAVerDespues();
-        } else if (itemId == R.id.nav_group) {
-            irAModoGrupo();
         }
     }
 
@@ -159,10 +156,6 @@ public class ActividadPrincipal extends AppCompatActivity {
         mostrarFragmento(new VerDespuesFragment(), true);
     }
 
-    public void irAModoGrupo() {
-        resaltarMenu(R.id.nav_group);
-        mostrarFragmento(new ModoGrupoFragment(), true);
-    }
 
     private void resaltarMenu(int itemId) {
         if (navigationView != null) {
