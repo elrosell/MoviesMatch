@@ -193,16 +193,6 @@
             android:textAllCaps="false"
             android:textStyle="bold" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnModoGrupo"
-            style="@style/AppButton.Outline"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="Modo grupo"
-            android:textAllCaps="false"
-            android:textStyle="bold" />
-
     </LinearLayout>
 
 

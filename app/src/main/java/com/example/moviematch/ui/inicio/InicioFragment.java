@@ -32,10 +32,8 @@ public class InicioFragment extends Fragment {
         ChipGroup chipGroupMood = view.findViewById(R.id.chipGroupMood);
         ChipGroup chipGroupCompany = view.findViewById(R.id.chipGroupCompany);
         MaterialButton btnBuscar = view.findViewById(R.id.btnBuscarPelicula);
-        MaterialButton btnModoGrupo = view.findViewById(R.id.btnModoGrupo);
 
         btnBuscar.setOnClickListener(v -> navegarARecomendaciones(chipGroupTime, chipGroupMood, chipGroupCompany));
-        btnModoGrupo.setOnClickListener(v -> ((ActividadPrincipal) requireActivity()).irAModoGrupo());
     }
 
     private void navegarARecomendaciones(ChipGroup chipGroupTime, ChipGroup chipGroupMood, ChipGroup chipGroupCompany) {
