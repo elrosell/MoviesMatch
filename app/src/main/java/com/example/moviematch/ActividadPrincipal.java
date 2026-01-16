@@ -17,7 +17,6 @@ import com.example.moviematch.datos.modelo.Pelicula;
 import com.example.moviematch.datos.preferencias.GestorPreferenciasUsuario;
 import com.example.moviematch.ui.detalle.DetallePeliculaFragment;
 import com.example.moviematch.ui.inicio.InicioFragment;
-import com.example.moviematch.ui.modogrupo.ModoGrupoFragment;
 import com.example.moviematch.ui.onboarding.OnboardingFragment;
 import com.example.moviematch.ui.recomendaciones.RecomendacionesFragment;
 import com.example.moviematch.ui.verdespues.VerDespuesFragment;
@@ -99,10 +98,6 @@ public class ActividadPrincipal extends AppCompatActivity {
 
     public void irAVerDespues() {
         mostrarFragmento(new VerDespuesFragment(), true);
-    }
-
-    public void irAModoGrupo() {
-        mostrarFragmento(new ModoGrupoFragment(), true);
     }
 
     private void mostrarFragmento(Fragment fragment, boolean agregarAStack) {
