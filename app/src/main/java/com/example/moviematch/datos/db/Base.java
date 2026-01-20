@@ -7,14 +7,14 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 /**
- * Base de datos SQLite (estilo "Base" como el ejemplo que compartiste).
+ * Base de datos SQLite (estilo "Base" como el ejemplo de clase).
  *
  * Nota:
  * - Aquí se crean las tablas necesarias para MoviesMatch.
  * - Se deja un constructor con la firma clásica (context, name, factory, version)
  *   para que puedas usarla exactamente como en el ejemplo.
  */
-public class Base extends SQLiteOpenHelper {
+public class <Base extends SQLiteOpenHelper {
 
     public static final String NOMBRE_BD = "pelis_app.db";
     public static final int VERSION_BD = 1;

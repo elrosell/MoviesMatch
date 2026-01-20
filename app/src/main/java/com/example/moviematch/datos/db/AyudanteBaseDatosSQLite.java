@@ -4,7 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-public class AyudanteBaseDatosSQLite extends SQLiteOpenHelper {
+public class    AyudanteBaseDatosSQLite extends SQLiteOpenHelper {
 
     public static final String NOMBRE_BD = "pelis_app.db";
     private static final int VERSION = 1;
